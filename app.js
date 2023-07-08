@@ -8,7 +8,7 @@ const dotenv = require("dotenv");
 dotenv.config();
 var cors = require("cors");
 app.use(cors());
-let db;
+var db;
 
 //middleware
 
