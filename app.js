@@ -8,7 +8,7 @@ const dotenv = require("dotenv");
 dotenv.config();
 var cors = require("cors");
 app.use(cors());
-var db;
+let db;
 
 //middleware
 
@@ -203,7 +203,7 @@ app.delete("/deleteOrder/:id", function (req, res) {
 MongoClient.connect(MONGO_URL, (err, client) => {
   console.log("Mongo is connected");
   if (err) console.log("Error while connecting");
-  db = client.collection("Edu2023");
+  db = client.db("Edu2023");
   app.listen(PORT, () => {
     console.log(`Server started on port ${PORT}`);
   });
