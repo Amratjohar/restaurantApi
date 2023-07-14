@@ -202,11 +202,10 @@ app.delete("/deleteOrder/:id", function (req, res) {
 //Mongodb connection
 MongoClient.connect(MONGO_URL, (err, client) => {
   console.log("Mongo is connected");
-  // if (err) console.log("Error while connecting");
+  if (err) console.log("Error while connecting");
    db= client.db("Edu2023");
-   console.log(db);
   app.listen(PORT, () => {
     console.log(`Server started on port ${PORT}`);
-  });
+  })
   client.close();
 });
