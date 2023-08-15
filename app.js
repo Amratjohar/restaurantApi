@@ -204,8 +204,8 @@ MongoClient.connect(MONGO_URL, (err, client) => {
   console.log("Mongo is connected");
   console.log(client);
   if (err) console.log("Error while connecting");
-  //db=client.db("Edu2023");
-  db=db.client("Edu2023");
+  db=client.db("Edu2023");
+ // db=db.client("Edu2023");
   app.listen(PORT, () => {
     console.log(`Server started on port ${PORT}`);
   });
