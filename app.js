@@ -1,5 +1,5 @@
-const express = require("express");
-const mongo = require("mongodb");
+const express = require('express');
+const mongo = require('mongodb');
 const MongoClient = mongo.MongoClient;
 
 // const connectionURL = "mongodb+srv://your-connection-srv-here"
@@ -13,7 +13,7 @@ dotenv.config();
 var cors = require("cors");
 app.use(cors());
 app.use(express.json());
-let db;
+let db=null;
 
 //middleware
 
